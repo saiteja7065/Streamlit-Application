@@ -2,10 +2,12 @@
 utils.py - Utility functions for Note-to-Task AI
 """
 import spacy
+import spacy.cli
 import dateparser
 from typing import List, Dict, Any
 from fpdf import FPDF
 
+spacy.cli.download("en_core_web_sm")
 nlp = spacy.load('en_core_web_sm')
 
 PRIORITY_KEYWORDS = {
